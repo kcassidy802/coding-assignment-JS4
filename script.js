@@ -12,8 +12,8 @@ ages[7] - ages[0] is not allowed!
 
 let ages = [3, 9, 23, 64, 2, 8, 28, 93];
 console.log(ages);
-let lastIndexValue = ages.length - 1;
-let result = ages[lastIndexValue] - ages[0];
+let lastIndexValue = ages.length - 1;  //find value of last element in array//
+let result = ages[lastIndexValue] - ages[0];  // we can see how we accesed the first element// 
 console.log("subtracting last number in index with first:", result);
 
 
@@ -28,9 +28,9 @@ console.log("subtracting last number in index with first:", result);
 
 
 ages.push(8);
-console.log("Adding new number to array:",ages);
+console.log("Adding new number to array:",ages); // we can see the 8 being pushed into array //
 let subtractAges = [ages.length - 1] - ages[0];
-console.log("subtracting pushed array number with first index number:",subtractAges); 
+console.log("subtracting pushed array number with first index number:",subtractAges); // now we see we we repeated step above //
 
 
 
@@ -43,11 +43,11 @@ console.log("subtracting pushed array number with first index number:",subtractA
 
 let allAge = 0;
 let allPeople = ages.length;
-for (let i = 0; i < allPeople; i++){
-    allAge += ages[i];
+for (let i = 0; i < allPeople; i++){ // we are going to use different vartions of this statement all ??
+    allAge += ages[i];               // throught the project, very important!! //
 }
 let ourAverage = allAge / allPeople;
-console.log("average age:", ourAverage);
+console.log("average age:", ourAverage); // printed the average //
 
 
 
@@ -59,7 +59,7 @@ console.log("average age:", ourAverage);
 // (( Remember to print your results in console if needed!!))
 
 let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob']
-console.log("names array:", names);
+console.log("names array:", names); // printed the new array //
 
 
 
@@ -78,7 +78,7 @@ for (let i = 0; i < ourNames; i++) {
     allLetters += names[i].length;
 }
 let totalAverage = allLetters / ourNames;
-console.log("average of array:", totalAverage);
+console.log("average of array:", totalAverage); // printed average number of letters per name //
 
 
 
@@ -90,12 +90,12 @@ console.log("average of array:", totalAverage);
 // */
 
 let ccNames = '';
-for (let i = 0; i < names.length; i++) {
+for (let i = 0; i < names.length; i++) { // again we see this type of statement //
     ccNames += names[i];
     if (i < names.length - 1) {
         ccNames += ' ';
     }
-    console.log("con-cacted names:", ccNames);
+    console.log("con-cacted names:", ccNames); // printed concacted names //
 }
 
 
@@ -107,7 +107,7 @@ How do you access the last element of any array?
 (( Remember to print your results in console if needed!!))
 */
 
-console.log(ages[ages.length - 1]); 
+console.log(ages[ages.length - 1]); // printing a way to have acceess to the last element in an array//
 
 
 
@@ -116,7 +116,7 @@ How do you access the first element of any array?
 (( Remember to print your results in console if needed!!))
 */
 
-console.log(ages[0]);
+console.log(ages[0]); // easy way to access the first element in the array //
 
 
 
@@ -133,9 +133,9 @@ let nameLengths = [5, 3, 4];             // create a new array
 */
 
 let nameLengths = [];
-for (let i = 0; i < names.length; i++) {
+for (let i = 0; i < names.length; i++) { // present again //
 nameLengths.push(names[i].length)
-console.log("# of letters in name:", nameLengths)
+console.log("# of letters in name:", nameLengths) // printed length of each name to nameLengths // 
 }
 
 
@@ -149,9 +149,9 @@ sum of all the elements in the array.
 
 let totalNum = 0;
 for 
-    (let i = 0; i < nameLengths.length; i++){
+    (let i = 0; i < nameLengths.length; i++){  // we get it //
     totalNum += nameLengths [i];
-    console.log("sum of all elements:,", totalNum);
+    console.log("sum of all elements:,", totalNum); // printed the sum of all elements //
 }
 
 
@@ -164,11 +164,11 @@ return 'HelloHelloHello').
 */
 
 function contParam (word, n){
-let contParam = word.repeat(n);
+let contParam = word.repeat(n); // first time using the repeat function // 
 console.log("say hello 3 times:", contParam)
 }
 
-contParam("Hello", 3);
+contParam("Hello", 3); // calling back and its printed 3 times //
 
 
 
@@ -181,12 +181,12 @@ The full name should be the first and the last name separated by a space.
 */
 
 function createFullName(firstName, lastName) {
-    return `${firstName} ${lastName}`;
+    return `${firstName} ${lastName}`; // first time using different identifers with the $ //
 }
 let firstName = 'kyle';
 let lastName = 'cassidy';
 let myName = createFullName(firstName, lastName);
-console.log(myName);
+console.log(myName); // printed the coolest name in the world // 
 
 
 
@@ -203,14 +203,15 @@ let newestArray = [40, 60, 100, 1];
 
 function listNewArray(array){
     let sum = 0;
-    for ( let i =0; i < array.length; i++){
+    for ( let i =0; i < array.length; i++){ // present // 
         sum += array[i];
     }
     return sum > 100
 
 }
 
-console.log("is my array greater then 100", newestArray)
+console.log("is my array greater then 100", newestArray) // boolean so true or flase and it while print true 
+                                                         // since the sum of the array is greater then 100
 
 
 
@@ -223,26 +224,25 @@ console.log("is my array greater then 100", newestArray)
  of all the elements in the array.
  (( Remember to print your results in console if needed!!))
 */
-
+let numberArray = [100, 50, 75, 200 ];
 
 function giveMeAverage(numbers) {
-    if (numbers.length === 0) {
+    if (numbers.length === 0) { // first time seeing an if //
         return 0; 
     }
 
     let sum = 0;
-    for (let i = 0; i < numbers.length; i++) {
+    for (let i = 0; i < numbers.length; i++) { // present // 
         sum += numbers[i];
     }
 
-    let average = sum / numbers.length;
+    let average = sum / numbers.length;// using division // 
     return average;
 }
 
-let numberArray = [100, 50, 75, 200 ];
 
 let myNewAverage = giveMeAverage(numberArray);
-console.log(myNewAverage); 
+console.log(myNewAverage); // print will return the averages of array // 
 
 
 
@@ -258,13 +258,13 @@ the first array is greater than the average of the elements in the second array.
 (( Remember to print your results in console if needed!!))
 */
 
-let number1 = [100, 45, 55, 65];
+let number1 = [100, 45, 55, 65]; // we see both arrays // 
 let number2 = [5, 10, 15, 20];
 
 function lastAverage(array1, array2){
     let total1 =0;
     let total2 =0;
-    for (let number of number1){
+    for (let number of number1){ // two for statements for arrays number1 and number2
         total1 += number;
     }
 
@@ -273,12 +273,13 @@ function lastAverage(array1, array2){
     }
 let average1 = total1 / array1.length;
 let average2 = total2 / array2.length;
-console.log("new averages", average1, average2);
+console.log("new averages", average1, average2); // we both averages printed //
 
 
 if (number1 > number2);{
-console.log("if first array average is greater", true);
-    return true
+console.log("if first array average is greater", true); // another boolean statement where first array is
+                                                        // so it makes it true
+return true
 }
 }
 lastAverage(number1, number2)
@@ -295,9 +296,10 @@ and returns true if it is hot outside and if moneyInPocket is greater than
 */
 
 function willBuyDrink(isHotOutside, moneyInPocket) {
-    return isHotOutside && moneyInPocket > 10.50;
+    return isHotOutside && moneyInPocket > 10.50; // another boolean // 
 }
 let warmWeather = true;
 let myMoney= 13.50;
-let canIHaveDrink = willBuyDrink(warmWeather, myMoney);
+let canIHaveDrink = willBuyDrink(warmWeather, myMoney); // the weather is warm and we have more then 10.50 in wallet
+                                                        //  so making it true we could buy the drink
 console.log(canIHaveDrink); 
